@@ -1,0 +1,2 @@
+# SPOP
+Haskell Project
