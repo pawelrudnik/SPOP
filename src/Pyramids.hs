@@ -43,5 +43,13 @@ isOnBoard size (x,y) =
 	if ((x < size && x>=0) && (y < size && y>=0)) then True
 	else False
 
+getCell :: Board -> Cell -> Int
+getCell (Board rows) (x,y) = (rows !! x) !! y
+
+previousCell :: Board -> Cell -> Cell
+previousCell board (0,0) = ((getSize board - 1), (getSize board)) 
+previousCell board (x,0) = (x-1, (getSize board) -1)
+previousCell board (x,y) = (x, y-1)
+
 
 
