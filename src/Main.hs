@@ -1,7 +1,9 @@
 import Pyramids
 import Solve
 
--- główna funkcja: pobiera nazwę pliku z łamigłówką, wczytuje jego zawartość, rozwiązuje i wyświetla rozwiązanie
+{- główna funkcja: pobiera nazwę pliku z łamigłówką i wczytuje jego zawartość (wskazówki)
+   wypełnia tablicę zerami i rozwiązuje łamigłówkę
+   jeśli znajdzie rozwiązanie to je wyświetla -}
 
 main = do
   
@@ -15,10 +17,10 @@ main = do
 			else
 				putStrLn "Wczytana łamigłówka jest niepoprawna"
 
-  let output = createEmptyBoard input
+  let board = createEmptyBoard input
 
-  let s = solvePuzzle input output
-  putStrLn $ show s
+  let solution = solvePuzzle input board
+  putStrLn $ show solution
 
   putStrLn "Wciśnij klawisz enter aby zakończyć"
   key <- getChar
